@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma and Andrew's Wedding Stream</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Disable scrolling */
+            background: url('https://emmaandandrew.s3.us-east-2.amazonaws.com/Andrew-Emma-Engagement-21.jpg') no-repeat center center fixed;  
+            background-size: cover;
+            position: relative;
+        }
+    
+        body::after {
+            content: "";
+            background: rgba(0, 0, 0, 0.5); /* black with 50% transparency */
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: 5; /* Make it sit behind the content */
+        }
+    
+        .container-fluid {
+            height: calc(100% - 56px); /* reduce height by the navbar's height (56px is default for Bootstrap 4) */
+            display: flex; /* use Flexbox */
+            justify-content: center; /* center horizontally */
+            align-items: center; /* center vertically */
+            padding: 0;
+            margin: 0;
+        }
+    
+        .video-container {
+            width: 70%; /* use 70% of the width */
+            position: relative;
+            padding-top: 39.25%; /* maintain aspect ratio */
+            overflow: hidden;
+        }
+    
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 6;
+        }
+    </style>
+    
+
+</head>
+<body>
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Emma and Andrew's Wedding Stream</a>
+            <a class="navbar-brand text-right" href="#">Scheduled for Saturday the 24th at 4pm EST</a>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container-fluid">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/meDT9BQ_Y0M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+</body>
+</html>
